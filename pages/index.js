@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,40 +11,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Do a question now:
-        </h1>
+        <h1 className={styles.title}>Do a question now:</h1>
 
         <div className={styles.grid}>
-          <a href="/questions/Mathematics" className={styles.card}>
-            <h2>Mathematics</h2>
-            <p>Pure 1~4, S1 and M1</p>
-          </a>
+          <Link href="/questions/Mathematics" className={styles.card}>
+            <h2 className={styles.card}>Mathematics</h2>
+          </Link>
 
-          <a href="/questions/Economics" className={styles.card}>
-            <h2>Economics</h2>
-            <p>Unit 1~4</p>
-          </a>
+          <Link href="/questions/Economics" className={styles.card}>
+            <h2 className={styles.card}>Economics</h2>
+          </Link>
 
-          <a
-            href="/questions/Biology"
-            className={styles.card}
-          >
-            <h2>Biology</h2>
-            <p>Unit 1~6</p>
-          </a>
-
+          <Link href="/questions/Biology">
+            <h2 className={styles.card}>Biology</h2>
+          </Link>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
+        <Link
           href="https://github.com/sidharthmirch"
           target="_blank"
           rel="noopener noreferrer"
         >
           Made with ❤️ by Sid
-        </a>
+        </Link>
       </footer>
     </div>
   );
