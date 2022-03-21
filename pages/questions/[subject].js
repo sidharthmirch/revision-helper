@@ -9,7 +9,7 @@ export default function Questions() {
   const router = useRouter();
   const { subject } = router.query;
 
-  const mathematicsLength = 215;
+  const mathematicsLength = 321;
   const economicsLength = 0;
   const biologyLength = 0;
   let randomIndex;

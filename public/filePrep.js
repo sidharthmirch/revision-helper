@@ -14,7 +14,7 @@ const rename = (path) => {
     );
     i++;
   });
-  console.log(i);
+  console.log(`Update [subject].js to reflect the new count: ${i}`);
 };
 
 rename("/Mathematics");
