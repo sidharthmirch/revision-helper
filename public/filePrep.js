@@ -14,15 +14,7 @@ const rename = (path) => {
     );
     i++;
   });
+  console.log(i);
 };
 
-const questionCount = (path) => {
-  let count = 0;
-  fs.readdirSync(`${process.cwd()}/images${path}`).forEach((file) => {
-    count++
-  });
-  console.log(count)
-  fs.writeFileSync(`${process.cwd()}/images${path}/count.txt`, count.toString())
-}
-
-questionCount("/Mathematics")
+rename("/Mathematics");
