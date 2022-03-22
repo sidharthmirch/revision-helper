@@ -10,11 +10,11 @@ const rename = (path) => {
   fs.readdirSync(`${process.cwd()}/images${path}`).forEach((file) => {
     fs.renameSync(
       `${process.cwd()}/images${path}/${file}`,
-      `${process.cwd()}/images${path}/${i}.png`
+      `../public/images${path}/${i}.png`
     );
     i++;
   });
-  console.log(`Update [subject].js to reflect the new count: ${i}`);
+  console.log(`Update [subject].js to reflect the new count for ${path}: ${i}`);
 };
 
 rename("/Mathematics");
